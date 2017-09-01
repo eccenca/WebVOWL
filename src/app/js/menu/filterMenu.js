@@ -42,10 +42,10 @@ module.exports = function (graph) {
 		});
 
 		addFilterItem(datatypeFilter, "datatype", "Datatype properties", "#datatypeFilteringOption");
-		addFilterItem(objectPropertyFilter, "objectProperty", "Object properties", "#objectPropertyFilteringOption");
-		addFilterItem(subclassFilter, "subclass", "Solitary subclasses", "#subclassFilteringOption");
-		addFilterItem(disjointFilter, "disjoint", "Class disjointness", "#disjointFilteringOption");
-		addFilterItem(setOperatorFilter, "setoperator", "Set operators", "#setOperatorFilteringOption");
+		addFilterItem(objectPropertyFilter, "objectProperty", "literals / relations", "#objectPropertyFilteringOption");
+		//addFilterItem(subclassFilter, "subclass", "Solitary subclasses", "#subclassFilteringOption");
+		//addFilterItem(disjointFilter, "disjoint", "Class disjointness", "#disjointFilteringOption");
+		//addFilterItem(setOperatorFilter, "setoperator", "Set operators", "#setOperatorFilteringOption");
 
 		addNodeDegreeFilter(nodeDegreeFilter, nodeDegreeContainer);
 
@@ -163,7 +163,7 @@ module.exports = function (graph) {
 			graph.update();
 		}
 	}
-	
+
 	function setSliderValue(slider, value) {
 		slider.property("value", value).on("input")();
 	}

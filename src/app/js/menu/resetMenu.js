@@ -4,6 +4,7 @@
  * @param graph the associated webvowl graph
  * @returns {{}}
  */
+import webvowl from '../../../webvowl/js/entry';
 module.exports = function (graph) {
 
 	var resetMenu = {},

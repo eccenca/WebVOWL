@@ -2,6 +2,7 @@
  * Contains the logic for the export button.
  * @returns {{}}
  */
+import webvowl from '../../../webvowl/js/entry';
 module.exports = function (graph) {
 
 	var exportMenu = {},
@@ -194,7 +195,7 @@ module.exports = function (graph) {
 		var comment = jsonObj._comment;
 		var additionalString = " [Additional Information added by WebVOWL Exporter Version: " + "@@WEBVOWL_VERSION" + "]";
 		// adding new string to comment only if it does not exist
-		if (comment.indexOf(additionalString) === -1) {
+		if (!comment || comment.indexOf(additionalString) === -1) {
 			jsonObj._comment = comment + " [Additional Information added by WebVOWL Exporter Version: " + "@@WEBVOWL_VERSION" + "]";
 		}
 

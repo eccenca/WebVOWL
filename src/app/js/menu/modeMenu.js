@@ -38,12 +38,12 @@ module.exports = function (graph) {
 			var searchMenu=graph.options().searchMenu();
 			searchMenu.hideSearchEntries();
 		});
-        addCheckBox("labelWidth","Dynamic label width","#dynamicLabelWidth",graph.options().dynamicLabelWidth,1);
+        //addCheckBox("labelWidth","Dynamic label width","#dynamicLabelWidth",graph.options().dynamicLabelWidth,1);
 		addModeItem(pickAndPin, "pickandpin", "Pick & pin", "#pickAndPinOption", false);
-		addModeItem(nodeScaling, "nodescaling", "Node scaling", "#nodeScalingOption", true);
-		addModeItem(compactNotation, "compactnotation", "Compact notation", "#compactNotationOption", true);
+		//addModeItem(nodeScaling, "nodescaling", "Node scaling", "#nodeScalingOption", true);
+		//addModeItem(compactNotation, "compactnotation", "Compact notation", "#compactNotationOption", true);
 		var container = addModeItem(colorExternals, "colorexternals", "Color externals", "#colorExternalsOption", true);
-		colorModeSwitch = addExternalModeSelection(container, colorExternals);
+		//colorModeSwitch = addExternalModeSelection(container, colorExternals);
 	};
     function addCheckBox(identifier, modeName, selector,onChangeFunc,updateLvl) {
         var moduleOptionContainer = d3.select(selector)
@@ -138,7 +138,9 @@ module.exports = function (graph) {
 	 */
 	modeMenu.reset = function () {
 		checkboxes.forEach(function (checkbox) {
-			var defaultState = checkbox.datum().defaultState,
+			console.warn(checkbox)
+		    if (checkbox === null || checkbox[0][0] === null) return
+		    var defaultState = checkbox.datum().defaultState,
 				isChecked = checkbox.property("checked");
 
 			if (isChecked !== defaultState) {
@@ -152,7 +154,8 @@ module.exports = function (graph) {
 		});
 
 		// set the switch to active and simulate disabling
-		colorModeSwitch.datum().active = true;
+		if (!colorModeSwitch) return
+        colorModeSwitch.datum().active = true;
 		colorModeSwitch.on("click")();
 	};
 

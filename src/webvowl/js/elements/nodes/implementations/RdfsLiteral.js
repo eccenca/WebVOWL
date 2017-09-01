@@ -18,10 +18,6 @@ module.exports = (function () {
 			superDrawFunction(element, ["dashed"]);
 		};
 
-		this.label = function (p) {
-			if (!arguments.length) return superLabelFunction();
-			return this;
-		};
 	};
 	o.prototype = Object.create(DatatypeNode.prototype);
 	o.prototype.constructor = o;
