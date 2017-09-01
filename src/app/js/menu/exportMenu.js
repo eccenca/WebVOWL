@@ -284,20 +284,8 @@ module.exports = function (graph) {
 
 		// Modes Settings
 		var mMenu = graph.options().modeMenu();
-		var mContainer = mMenu.getCheckBoxContainer();
-		var cb_modes = [];
-		for (i = 0; i < mContainer.length; i++) {
-			cb_text = mContainer[i].attr("id");
-			isEnabled = mContainer[i].property("checked");
-			cb_obj = {};
-			cb_obj.id = cb_text;
-			cb_obj.checked = isEnabled;
-			cb_modes.push(cb_obj);
-		}
-		var colorSwitchState = mMenu.colorModeState();
 		jsonObj.settings.modes = {};
-		jsonObj.settings.modes.checkBox = cb_modes;
-		jsonObj.settings.modes.colorSwitchState = colorSwitchState;
+		jsonObj.settings.modes.checkBox = {};
 
 		var exportObj = {};
 		// todo: [ ] find better way for ordering the objects
