@@ -41,8 +41,8 @@ module.exports = function (graph) {
 			filterMenu.highlightForDegreeSlider(false);
 		});
 
-		addFilterItem(datatypeFilter, "datatype", "Datatype properties", "#datatypeFilteringOption");
-		addFilterItem(objectPropertyFilter, "objectProperty", "literals / relations", "#objectPropertyFilteringOption");
+		addFilterItem(datatypeFilter, "datatype", "Literals", "#datatypeFilteringOption");
+		addFilterItem(objectPropertyFilter, "objectProperty", "Relations", "#objectPropertyFilteringOption");
 		//addFilterItem(subclassFilter, "subclass", "Solitary subclasses", "#subclassFilteringOption");
 		//addFilterItem(disjointFilter, "disjoint", "Class disjointness", "#disjointFilteringOption");
 		//addFilterItem(setOperatorFilter, "setoperator", "Set operators", "#setOperatorFilteringOption");
