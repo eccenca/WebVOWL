@@ -237,7 +237,7 @@ module.exports = function (graph) {
 			}
 
 			if (newSelection >= numEntries) {
-				htmlCollection[selectedEntry].setAttribute('class', "dbEntrySelected");
+				//htmlCollection[selectedEntry].setAttribute('class', "dbEntrySelected");
 			}
 			if (newSelection >= 0 && newSelection < numEntries) {
 				htmlCollection[newSelection].setAttribute('class', "dbEntrySelected");

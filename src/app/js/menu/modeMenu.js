@@ -38,12 +38,12 @@ module.exports = function (graph) {
 			var searchMenu=graph.options().searchMenu();
 			searchMenu.hideSearchEntries();
 		});
-        //addCheckBox("labelWidth","Dynamic label width","#dynamicLabelWidth",graph.options().dynamicLabelWidth,1);
+        addCheckBox("labelWidth","Dynamic label width","#dynamicLabelWidth",graph.options().dynamicLabelWidth,1);
 		addModeItem(pickAndPin, "pickandpin", "Pick & pin", "#pickAndPinOption", false);
-		//addModeItem(nodeScaling, "nodescaling", "Node scaling", "#nodeScalingOption", true);
-		//addModeItem(compactNotation, "compactnotation", "Compact notation", "#compactNotationOption", true);
+		addModeItem(nodeScaling, "nodescaling", "Node scaling", "#nodeScalingOption", true);
+		addModeItem(compactNotation, "compactnotation", "Compact notation", "#compactNotationOption", true);
 		var container = addModeItem(colorExternals, "colorexternals", "Color externals", "#colorExternalsOption", true);
-		//colorModeSwitch = addExternalModeSelection(container, colorExternals);
+		colorModeSwitch = addExternalModeSelection(container, colorExternals);
 	};
     function addCheckBox(identifier, modeName, selector,onChangeFunc,updateLvl) {
         var moduleOptionContainer = d3.select(selector)

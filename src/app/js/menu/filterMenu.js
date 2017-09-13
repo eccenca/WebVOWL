@@ -43,9 +43,9 @@ module.exports = function (graph) {
 
 		addFilterItem(datatypeFilter, "datatype", "Literals", "#datatypeFilteringOption");
 		addFilterItem(objectPropertyFilter, "objectProperty", "Relations", "#objectPropertyFilteringOption");
-		//addFilterItem(subclassFilter, "subclass", "Solitary subclasses", "#subclassFilteringOption");
-		//addFilterItem(disjointFilter, "disjoint", "Class disjointness", "#disjointFilteringOption");
-		//addFilterItem(setOperatorFilter, "setoperator", "Set operators", "#setOperatorFilteringOption");
+		addFilterItem(subclassFilter, "subclass", "Solitary subclasses", "#subclassFilteringOption");
+		addFilterItem(disjointFilter, "disjoint", "Class disjointness", "#disjointFilteringOption");
+		addFilterItem(setOperatorFilter, "setoperator", "Set operators", "#setOperatorFilteringOption");
 
 		addNodeDegreeFilter(nodeDegreeFilter, nodeDegreeContainer);
 
