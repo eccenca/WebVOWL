@@ -208,7 +208,7 @@ module.exports = function (graph) {
 			delete classObj.pinned;
 		}
 		var propertyObj;
-		for (i = 0; i < propAttribute.length; i++) {
+		for (i = 0; i < propAttribute ? propAttribute.length : 0; i++) {
 			propertyObj = propAttribute[i];
 			delete propertyObj.pos;
 			delete propertyObj.pinned;
