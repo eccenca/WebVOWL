@@ -138,8 +138,7 @@ module.exports = function (graph) {
 	 */
 	modeMenu.reset = function () {
 		checkboxes.forEach(function (checkbox) {
-			console.warn(checkbox)
-		    if (checkbox === null || checkbox[0][0] === null) return
+			if (checkbox === null || checkbox[0][0] === null) return
 		    var defaultState = checkbox.datum().defaultState,
 				isChecked = checkbox.property("checked");
 
