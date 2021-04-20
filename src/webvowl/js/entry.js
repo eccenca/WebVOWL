@@ -1,4 +1,4 @@
-require("../css/vowl.css");
+// require("../css/vowl.css"); // included via our own stylesheets
 
 var nodeMap = require("./elements/nodes/nodeMap")();
 var propertyMap = require("./elements/properties/propertyMap")();
